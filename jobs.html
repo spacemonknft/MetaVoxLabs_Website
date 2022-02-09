@@ -1,0 +1,257 @@
+<!--
+////
+////
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Placeholder">
+        <meta name="author" content="Placeholder">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="200" />
+        <meta property="og:site-name" content="" />
+        <meta property="og:description" content="..." />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('icons/apple-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('icons/apple-icon-60x60.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('icons/apple-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('icons/apple-icon-76x76.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('icons/apple-icon-114x114.png') }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('icons/apple-icon-120x120.png.png') }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('icons/apple-icon-144x144.png') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('icons/apple-icon-152x152.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('icons/apple-icon-180x180.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('icons/android-icon-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('icons/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('icons/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('icons/favicon-16x16.png') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>MetaVox Labs</title>
+
+        <!-- Jquery CDN -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Google font : Roboto -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Slick -->
+        <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+        <!-- Main style -->
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/module.css">
+        <link rel="stylesheet" href="css/state.css">
+
+        <!-- Smooth show effect -->
+        <script>
+            $(document).ready(function(){
+                const ratio = .1
+                const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: ratio
+                }
+                const handleIntersect = function (entries, observer){
+                entries.forEach(function (entry){
+                    if (entry.intersectionRatio > ratio){
+                    entry.target.classList.add('reveal-visible')
+                    observer.unobserve(entry.target)
+                    }
+                })
+                }
+                const observer = new IntersectionObserver(handleIntersect, options)
+                document.querySelectorAll('[class*="reveal-"]').forEach(function (r) {
+                    observer.observe(r)
+                })
+            });
+        </script>
+    </head>
+
+    <body>
+        <!-- Main Header -->
+        <header class="main-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="index.html" class="logo"><span class="color">I</span>MetaVox<br><span class="color">I</span>Labs </a> 
+                    </div>
+                    <div class="col-6 text-right">
+                        <span id="btnMenu" class="btn btn-secondary" >
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"> </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Menu -->
+        <div class="main-menu">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                    <!--    <li><a href="#partners">Partners</a></li> -->
+                    <!--    <li><a href="#roadmap">Roadmap</a></li> -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Wrapper -->
+        <div class="main-wrapper">
+
+            <!-- Main Banner -->
+            <section id="home" class="main-banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-8 reveal-2">
+                            <h2>Job Openings: </h2></br>
+                            <h4>Head of Engineering</h4> </br>
+                            <h6><b>About Us:</b></h6>
+                            <p> MetaVox Labs is a video game company founded on the principles of nostalgia and pure entertainment. The nights spent bonding over games with your friends are some of the best moments in life. They spark nothing but joy and happiness. We are a company that believes in the art and beauty of bringing that type of experience to life for our players and our team. A company focused on surpassing the edge of technology, developing our gaming solutions solely on the blockchain. We are currently building a 2D Web3 MMORPG game full of action-packed battles, NFTs and amazing places to hang out with friends in the metaverse.
+                                
+                                About the Role: 
+                                We are looking for an extremely technical individual who will be a part of the base team and be a jack of all trades. They will be in charge of handling engineering tasks related to scaling and continually building our MMORPG game and operations. This will involve some solidity, Unity game & web3 app development, smart contracts and DevOps/security measures. 
+                                We don’t just want a problem solver, we want someone who likes to question, create, and dream. This role will require a lot of hands-on work but is a pivotal engineering leadership role in our company.</br></br>
+                                
+                            <h6><b>Requirements:</b></h6>
+                                •	Expert level experience/knowledge in game development using Unity game engine (2D) with C#</br>
+                                •	Proficiency in HTML/CSS, React/Javascript, Solidity</br>
+                                •	Experience with libraries like ether.js & web3.js </br>
+                                •	Deep experience/knowledge with smart contracts (ERC-20, ERC-721, ERC-1155) </br>
+                                •	Deep experience/knowledge with blockchain/web3 best security practices </br>
+                                •	Deep experience/knowledge in Web3 app development </br>
+                                •	Prior full stack development experience</br></br>
+                                
+                            <h6><b>Nice to Haves:</b></h6>
+                                •	Enthusiastic about MMORPGs or RPGs and Web3</br>
+                                •	Experience shipping browser-based games</br>
+                                •	Experience in a fast past environment/startup </br>
+                                •	Prior experience leading a team (or managing)</br></br>
+                            <h6><b>Job Info:</b></h6>
+                                •	This is an equity-based role and will start on a part time basis</br></br>
+                                
+                                If you believe you can add value in building our Web3 MMORPG and would like to join our team, please feel free to reach out via email us at <a href="mailto:spacemonk@metavoxlabs.com">spacemonk@metavoxlabs.com</a>. Include your resume, links to past work or GitHub, and why you believe you would be an asset to our team. 
+                                </p>
+                        <!--   <a class="btn btn-md btn-primary" href="https://github.com">Download <i class="fab fa-github"></i></a> --> 
+                        </div>
+                        <div class="col-12 col-md-4 reveal-3">
+                            <img class="img-fluid" src="img/logo.png" alt="/">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <div class="container">
+                    <div class="row">
+                    <!--    <article class="col-12 col-md-3">
+                            <h3>Company</h3>
+                            <ul>
+                                <li><a href="#about">About us</a></li> -->
+                            <!--    <li><a href="#features">Features</a></li> -->
+                            <!--    <li><a href="#team">Team</a></li> -->
+                            <!--    <li><a href="#team">Jobs</a></li> -->
+                            <!--    <li><a href="#partners">Partners</a></li> -->
+                            <!--    <li><a href="#roadmap">Roadmap</a></li> -->
+                            </ul>
+                        </article>
+                    <!--    <article class="col-12 col-md-3">
+                            <h3>Resources</h3>
+                            <ul>
+                                <li><a href="#">Wallet</a></li>
+                                <li><a href="#">Exchanges</a></li>
+                                <li><a href="#">Stores</a></li>
+                            </ul>
+                        </article>
+                        <article class="col-12 col-md-3">
+                            <h3>Exchanges</h3>
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </article>
+                        <article class="col-12 col-md-3">
+                            <h3>Community</h3>
+                            <ul>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Partners</a></li>
+                                <li><a href="#">Contribute</a></li>
+                            </ul>
+                        </article> -->
+                        <div class="col-12">
+                            <hr>   
+                        </div>
+                        <div class="col-12 col-md-6 social">
+                            <p>
+                                <a target="_blank" href="https://twitter.com/MetaVoxLabs"><i class="fab fa-twitter"></i></a>
+                                <a target="_blank" href="mailto:spacemonk@metavoxlabs.com"><i class="fas fa-envelope-square"></i></a> 
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-6 copyright">
+                            <p>By MetaVox Labs LLC</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- PopperJS & Bootstrap CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Slick -->
+        <script type="text/javascript" src="libs/slick/slick.min.js"></script>
+        <script>
+            $('.partners-slider').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                  {
+                    breakpoint: 1024,
+                    settings: {
+                      slidesToShow: 3
+                    }
+                  },
+                  {
+                    breakpoint: 600,
+                    settings: {
+                      slidesToShow: 3
+                    }
+                  },
+                  {
+                    breakpoint: 480,
+                    settings: {
+                      slidesToShow: 2
+                    }
+                  }
+                ]
+            });
+        </script>
+        <!-- -->
+        <script src="js/app.js"></script>
+    </body>
+</html>

@@ -56,8 +56,8 @@
 .alter-banner{
     background-image: url(/img/Site_image_ver3.png);
 background-repeat: no-repeat;
-width: 1920px;
-height: 500px;
+background-size:contain;
+background-position:center;
 padding: 190px 0 120px 0;
 margin-bottom: 120px;
 }

@@ -52,6 +52,16 @@
     margin-bottom: 120px;
 }
 
+/*About us banner*/
+.alter-banner{
+    background-image: url(/img/Site_image_ver3.png);
+background-repeat: no-repeat;
+width: 1920px;
+height: 500px;
+padding: 190px 0 120px 0;
+margin-bottom: 120px;
+}
+
 /* FOOTER BANNER */
 .footer-banner{
     background: linear-gradient(to right,#232526,#414345);
